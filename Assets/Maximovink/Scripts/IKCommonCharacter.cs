@@ -54,10 +54,6 @@ public class IKCommonCharacter : Character
             RLegTarget.transform.position = new Vector3(RLegTarget.transform.position.x, Mathf.Lerp(RLegTarget.transform.position.y, transform.position.y - PlayerHeight *0.5f, Time.fixedDeltaTime * 10f));
         }
 
-
         return;
-
-        
-
     }
 }
