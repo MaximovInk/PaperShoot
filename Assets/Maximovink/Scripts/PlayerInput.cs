@@ -35,6 +35,9 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Character.IsDead)
+            return;
+
         var mult = Input.GetKey(KeyCode.LeftShift) ? 1.5f : 1;
 
         if (IN.x > 0)
@@ -76,9 +79,14 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        IN = Vector2.zero;
+        if (Character.IsDead)
+            return;
+
+
         HeadTarget.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         ArmTarget.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        IN = Vector2.zero;
+
         var mult = Input.GetKey(KeyCode.LeftShift);
 
         if (HeadTarget.transform.position.x < transform.position.x)

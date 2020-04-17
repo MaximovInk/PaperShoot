@@ -1,6 +1,6 @@
 ﻿public abstract class Ability
 {
-    public abstract void Init(RagdollCharacter character);
+    public abstract void Init(Character character);
 
     public virtual void Update() { }
 

@@ -16,8 +16,8 @@ TagManager:
   - IKIgnoreAll
   - Entity
   - Obstacle
-  - 
-  - 
+  - Bullet
+  - HitBox
   - 
   - 
   - 
@@ -43,4 +43,16 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: In
+    uniqueID: 2756926539
+    locked: 0
+  - name: Outline
+    uniqueID: 3266376567
+    locked: 0
+  - name: Out
+    uniqueID: 1375987075
+    locked: 0
+  - name: UI
+    uniqueID: 178818419
     locked: 0
