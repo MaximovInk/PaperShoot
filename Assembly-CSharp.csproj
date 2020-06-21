@@ -64,28 +64,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Maximovink\Scripts\Ability.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\Bullet.cs" />
     <Compile Include="Assets\Maximovink\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Maximovink\Scripts\Character.cs" />
     <Compile Include="Assets\Maximovink\Scripts\DoubleJumpAbility.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\GameManager.cs" />
     <Compile Include="Assets\Maximovink\Scripts\Gun.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\HealthBar.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\HingeSpring.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\Hitbox.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\HitboxPart.cs" />
     <Compile Include="Assets\Maximovink\Scripts\IK2DFabrik.cs" />
     <Compile Include="Assets\Maximovink\Scripts\IK2DLook.cs" />
     <Compile Include="Assets\Maximovink\Scripts\IKCommonCharacter.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\IKRagdollCharacter.cs" />
     <Compile Include="Assets\Maximovink\Scripts\PID.cs" />
     <Compile Include="Assets\Maximovink\Scripts\PlayerInput.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\RaycasterAnalys.cs" />
+    <Compile Include="Assets\Maximovink\Scripts\RagdollCharacter.cs" />
     <Compile Include="Assets\Maximovink\Scripts\RotationResetter.cs" />
     <Compile Include="Assets\Maximovink\Scripts\SpriteTarget.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\UnityExtensions.cs" />
-    <Compile Include="Assets\Maximovink\Scripts\ZombieController.cs" />
-    <None Include="Assets\Maximovink\OutlineShader.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Code/Unity/Projects/2DBlueprint/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

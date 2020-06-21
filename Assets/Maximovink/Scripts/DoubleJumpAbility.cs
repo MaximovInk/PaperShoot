@@ -2,7 +2,7 @@
 
 public class DoubleJumpAbility : Ability
 {
-    private Character character;
+    private RagdollCharacter character;
 
     public bool Can = false;
     private bool lastIsGround = false;
@@ -12,7 +12,7 @@ public class DoubleJumpAbility : Ability
 
     private float force = 0f;
 
-    public override void Init(Character character)
+    public override void Init(RagdollCharacter character)
     {
         this.character = character;
     }

@@ -4,36 +4,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public float Health { 
-        get => health;
-        set { 
-            health = value;
-
-            if (health <= 0)
-                IsDead = true;
-
-            HealthBar.gameObject.SetActive(health != 100 && !IsDead);
-            HealthBar.SetValue(health / 100f);
-        }
-    }
-
-    public void AddDamage(float value)
-    {
-        Health -= value;
-    }
-
-    private float health = 100f;
-
-    public bool IsDead { get => isDead; set { var ch = isDead != value; isDead = value; if (isDead && ch) Die(); } }
-
-    private bool isDead;
-
-    public float PlayerHeight = 1.5f;
-
-    public float forceFactor = 1f;
-
-    public HealthBar HealthBar;
-
     public bool IsGround { get; protected set; }
     public bool IsStay { get; protected set; }
     public bool RotIsNormal { get; protected set; }
@@ -75,17 +45,10 @@ public class Character : MonoBehaviour
     public List<IK2DFabrik> FlipFabriks = new List<IK2DFabrik>();
     public List<SpriteRenderer> FlipSprites = new List<SpriteRenderer>();
 
-    public CapsuleCollider2D MainCollider;
-
     public float LegsInAirStopping = 0.8f;
 
     public bool Flip { get => flip; set { if (value != flip) DoFlip(); } }
     private bool flip = false;
-
-    protected virtual void Die()
-    { 
-        
-    }
 
     private void DoFlip()
     {
@@ -137,10 +100,23 @@ public class Character : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        if (IsDead)
-            return;
-
         IsMovingX = Mathf.Abs(Rigidbody2D.velocity.x) > MoveXThreshold;
+
+
+
+       /* var l_raycast = Physics2D.CircleCast(LLegTarget.position, 0.05f, Vector2.up, 0.05f ,GroundMask);
+
+        var r_raycast = Physics2D.CircleCast(RLegTarget.position, 0.05f, Vector2.up, 0.05f, GroundMask);
+
+        if (l_raycast)
+        {
+            LLegTarget.position += new Vector3(0,0.05f,0);
+        }
+
+        if (r_raycast)
+        {
+            RLegTarget.position += new Vector3(0, 0.05f, 0);
+        }*/
     }
 
     public virtual void AddForce(Vector2 force, ForceMode2D mode = ForceMode2D.Force)
